@@ -12,14 +12,14 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://110.8.197.253:9004/choi?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://192.168.35.96:3306/choi?characterEncoding=UTF-8&serverTimezone=UTC
     username: chlwl
     password: chlwl695
 
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       use-new-id-generator-mappings: false

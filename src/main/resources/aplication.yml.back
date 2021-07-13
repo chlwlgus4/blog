@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.35.96:3306/choi?characterEncoding=UTF-8&serverTimezone=UTC
+    username: chlwl
+    password: chlwl695
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 9090
