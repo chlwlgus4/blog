@@ -19,6 +19,17 @@ public class DummyControllerTest {
     @Autowired
     private UserRepository userRepository;
 
+    @DeleteMapping("/dummy/user/{id}")
+    private String delete(@PathVariable Long id) {
+        try {
+            userRepository.deleteById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "삭제에 실패하였습니다. 해당 id는 DB에 없습니다. id = "+id;
+        }
+
+        return "삭제되었습니다.";
+    }
     @Transactional
     @PutMapping("/dummy/user/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User user) {
